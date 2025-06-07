@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.carrito {
+  margin-right: 30px;
+  padding: 5px 10px;
+}
+
+.carrito a {
+  color: #ff7d00;
+}
+
+.carrito:hover {
+  background-color: #15616d;
+  color: #ffecd1;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+
+.encabezado {
+  grid-area: encabezado;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  background-color: #001524;
+  color: #ff7d00;
+}
+.logo {
+  width: 5vw;
+  height: 9vh;
+}
+
+.menu {
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  column-gap: 3%;
+  background-color: #15616d;
+  padding: 5px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffecd1;
+  padding: 5px 10px;
+}
+
+.menu a:hover {
+  background-color: #001524;
+  color: #ff7d00;
+  border-radius: 10px;
+}
+
+#central {
+  display: flex;
+  justify-content:center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+
+}
+
+.izquierda, .centro, .derecha{
+  text-align: center;
+
+}
+
+.izquierda img,
+.centro img,
+.derecha img {
+width: 95%; 
+height: auto; 
+max-width: 100%; 
+max-height: 100%; 
+border-radius: 10px;
+}
+
+.pie {
+  background-color: #001524;
+  color: #ff7d00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.pie a i {
+  color: #ff7d00;
+  padding: 0 5px;
+}
+
+.pie p {
+  margin-bottom: 5px;
+}
+
+/*--------------------------------------------------*/
+/*Estilo para productos*/
+/*--------------------------------------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 30px 80px;
+  justify-content: center; 
+}
+
+
+.producto {
+  background-color: rgb(255, 236, 209);
+  /* padding: 20px 0px; */
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+  margin: auto; 
+  text-align: center;
+  width: 15rem; 
+   /* height: 100%; */
+  
+}
+
+.producto img{
+  width: 200px; 
+  height: 300px; 
+  object-fit: cover;
+}
+
+.btn-card {
+  border-style: none;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background-color: #15616d;
+  color: #ffecd1;
+  
+}
+
+.btn-card:hover{
+    background-color: #001524;
+    color: #ff7d00;
+
+}
+
+.descripcion {
+  display: none;
+  background-color: rgba(255, 236, 209, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 90%; 
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.producto:hover .descripcion {
+  display: block;
+}
+
+#resultProduct{
+  margin-bottom: 100px;
+}
+
+/*----------------------------------------------------------------------*/
+/* Pag del frontend para post put delete y create productos */
+/*----------------------------------------------------------------------*/
+.productosForm {
+  margin: 0 auto 60px; 
+  display: block;  
+}
+
+
+.menu.prod .menuProductos {
+  color: #ff7d00;
+  background-color: #001524;
+  border-radius: 10px;
+  cursor: default;
+
+}
+#formEditar{
+  margin-bottom: 100px;
+  
+}
+
+.form-group input,
+.form-group textarea {
+    border-width: 2px;
+    border-color: #15616d;
+    border-style: solid;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+border: 3px solid #15616D;
+outline: none;
+box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+ }
+.form-group textarea{
+  margin-bottom: 20px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+#btnAgregarProducto{
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+#contenedor-productos{
+  margin-bottom: 100px;
+}
+
+/*--------------------------------------------------*/
+/*Estilo de la grilla para pantallas de tablets*/
+/*--------------------------------------------------*/
+@media (max-width:768px){
+  .centro{
+    margin-top: 15px;
+  }
+}
+
+/*--------------------------------------------------*/
+/*Estilo de la grilla para pantallas grandes*/
+/*--------------------------------------------------*/
+@media (max-width: 992px) {
+  .logo {
+    width: 6vw;
+    height: 7vh;
+  }
+}
+
+/*--------------------------------------------------*/
+/*Estilo de la grilla para PC*/
+/*--------------------------------------------------*/
+@media (max-width: 1142px){
+  #central{
+    margin-bottom: 70px;
+  }
+
+  .derecha{
+    margin-top: 15px;
+  }
+}
+
+/*--------------------------------------------------*/
+/*Estilo para Acerca de*/
+/*--------------------------------------------------*/
+
+.acerca{
+  margin: 20px 15px 70px 15px;
+  background-color: #15616d;
+  color: #ffecd1;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.acerca-section{
+  margin-top: 30px;
+}
+
+
+/*--------------------------------------------------*/
+/*Estilo para accesorios*/
+/*--------------------------------------------------*/
+.accesorios{
+  text-align: center;
+  margin: 20px;
+}

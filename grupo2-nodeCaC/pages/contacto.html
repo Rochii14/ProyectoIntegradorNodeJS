@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+      <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/general-style.css">
+    <link rel="stylesheet" href="../style/contacto.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
+    <header id="idheader"></header>
+
+    <div class="contenedor-contacto">
+      <div class="datos-contacto">
+        <p class="intro animate__animated animate__backInDown">
+          ¡Nos encantaría saber de ti! Si tienes alguna pregunta, comentario o
+          simplemente quieres charlar sobre nuestros productos, no dudes en
+          contactarnos. Puedes comunicarte con nosotros por teléfono, correo
+          electrónico o completando el formulario de contacto.
+        </p>
+        <h3>Datos de contacto</h3>
+        <ul>
+          <li>
+            <strong>Dirección:</strong>
+            <a
+              href="https://maps.app.goo.gl/7jcbYABUZE61JXf86"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cabildo 2500, CABA, Argentina</a
+            >
+          </li>
+          <li>
+            <strong>Teléfono:</strong>
+            <a href="tel:+54911456789">+54 9 11 2345 6789</a>
+          </li>
+          <li>
+            <strong>Correo electrónico:</strong>
+            <span class="mail">petwhole@gmail.com</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-contacto">
+        <h3>Realizá tus consultas</h3>
+
+        <form action="#" class="formulario" id="formulario">
+          <!-- Grupo: Nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre y Apellido</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="nombre"
+                id="nombre"
+                placeholder="Juan Perez">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              Completar nombre y apellido. Solo
+              letras, espacios y tildes hasta 20 caracteres.
+            </p>
+          </div>
+
+          <!-- Grupo: Correo Electronico -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label"
+              >Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="email"
+                class="formulario__input"
+                name="correo"
+                id="correo"
+                placeholder="correo@correo.com">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              El correo solo puede contener letras, numeros, puntos, guiones y
+              guion bajo.
+            </p>
+          </div>
+
+          <!-- Grupo teléfono -->
+          <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Teléfono :</label>
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="telefono"
+                id="telefono"
+                placeholder="1122334455">
+              <i class="formulario__validacion-estado fa-solid fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">
+              El teléfono solo puede contener hasta 14 números. 
+            </p>
+          </div>
+
+          <!-- Grupo: Tipo de consulta -->
+          <div class="formulario__grupo" id="grupo__tipoConsulta">
+            <label class="formulario__label" for="tipo-consulta"
+              >Tipo de consulta:</label>
+            <select
+              class="formulario__select"
+              id="tipoConsulta"
+              name="tipoConsulta"
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="productos">Productos</option>
+              <option value="servicios">Servicios</option>
+              <option value="otro">Otro</option>
+            </select>
+            <p class="formulario__input-error">
+              Por favor elige una opción.
+            </p>
+          </div>
+
+          <!-- Grupo consulta -->
+          <div class="formulario__grupo" id="grupo__consulta">
+            <label class="formulario__label" for="consulta">Consulta :</label>
+            <textarea
+              onkeyup="contador()"
+              maxlength="1500"
+              class="formulario__input"
+              name="consulta"
+              id="consulta"
+              rows="4"
+              placeholder="Ingresa tu consulta"
+            ></textarea>
+            <p id="caracteres" class="caracteres">Cantidad de caracteres: <span id="resp">0/1500</span></p>
+            <p class="formulario__input-error">
+              Debes ingresar una consulta.
+            </p>
+          </div>
+
+          <!-- Grupo: términos y condiciones -->
+          <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+              <input
+                class="formulario__checkbox"
+                type="checkbox"
+                name="terminos"
+                id="terminos">
+              Acepto los Terminos y Condiciones
+            </label>
+          </div>
+
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p>
+              <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por
+              favor rellene todos los campos y de manera correcta.
+            </p>
+          </div>
+
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+              Formulario enviado exitosamente!
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.804228359535!2d-58.46261562684813!3d-34.55851187297047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb42b1cf7546f%3A0x9cb73c3ee01507c9!2sAv.%20Cabildo%202500%2C%20C1428%20AAT%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1713083850278!5m2!1ses!2sar"
+          title="Mapa de Cabildo 2500"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <footer id="idfooter"></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/formulario.js"></script>
+
+  </body>
+</html>

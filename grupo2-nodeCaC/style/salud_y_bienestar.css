@@ -1,0 +1,160 @@
+*{
+  margin: auto;
+}
+.titulo{
+  text-align: center;
+}
+.card{
+  padding: 0%;
+  margin-bottom: 5%;
+  width: 75%;
+  height: fit-content;
+  text-align: center;
+  
+}
+.card:hover{
+  transform: scale(1.01); 
+  box-shadow: #b4b4b4;
+  border-color: #9c9c9c;
+}
+
+ .card img{
+  margin: auto;
+ }
+ .card button{
+    border-radius: 5px;
+    margin: auto;
+    background-color: #FFECD1;
+    color: #78290F;
+    border-color: #FFECD1;
+ }
+.card button:hover{
+  background-color:#884c38; 
+  color: #FFECD1;
+  border-color: #884c38; 
+}
+
+.hidden {
+  display: none;
+}
+@media (min-width: 600px) {
+  .boton-muestra {
+      display: none;
+  }
+  .contenido-oculto {
+    display: block !important;
+  }
+}
+  /*--------------------------------------------------*/
+  /*Estilo de la grilla para pantallas moviles*/
+  /*--------------------------------------------------*/
+@media (max-width:768px){
+  .container{
+    margin-bottom: 25%; 
+  }
+  .card img{
+    width: 50%;
+  }
+
+   .card button{
+      width: 75%;
+      display: block;
+    } 
+  
+  .hidden{
+    /*visibility: hidden;*/
+    display: none;
+    margin-bottom: 10px;
+  }
+  } 
+
+  /*--------------------------------------------------*/
+  /*Estilo de la grilla para pantallas grandes*/
+  /*--------------------------------------------------*/
+  @media (min-width: 769px) {
+    .container{
+      width: 85%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+    .card img{
+      width: 95%;
+      margin: auto;
+    }
+    .card{
+      width: 100%;
+      height: 600px;
+      margin: 3px;
+    }
+    #tarj1{
+      flex: 1 1 200px;
+    } 
+    #tarj2{
+      flex: 1 1 200px;
+    } 
+    #tarj3{
+      flex: 1 1 400px;
+    } 
+    #tarj4{
+      flex: 1 1 200px;
+    } 
+    #tarj5{
+      flex: 1 1 200px;
+    } 
+    #tarj6{
+      flex: 1 1 150px;
+    } 
+    /*.card button{
+       visibility: hidden; 
+      display: none;
+    }*/
+    .hidden{
+      /*visibility: hidden;margin-bottom: 10px;*/
+      display: block;
+      
+    }
+    .boton-muestra {
+      display: none;
+    }
+    .contenido-oculto {
+      display: block !important;
+    }
+  }
+  /*--------------------------------------------------*/
+  /*Estilo de la grilla para PC*/
+  /*--------------------------------------------------*/
+  @media (min-width: 992px){
+    .container{
+      margin-bottom: 10%; 
+      /*display: flex;
+      flex-wrap: wrap;*/
+    }
+    .card img{
+      width: 70%;
+    }
+    #tarj1{
+      flex: 1 1 450px;
+    } 
+    #tarj2{
+      flex: 1 1 300px;
+    } 
+    #tarj3{
+      flex: 1 1 400px;
+    } 
+    #tarj4{
+      flex: 1 1 350px;
+    } 
+    #tarj5{
+      flex: 1 1 400px;
+    } 
+    #tarj6{
+      flex: 1 1 200px;
+    } 
+    .card button{
+      display: none;
+    }
+    .hidden{
+      display: block;
+    }
+  }
